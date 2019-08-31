@@ -7,6 +7,8 @@
 * [Backbone***](https://backbonejs.org/#Getting-started)
 * [Hackernoon***](https://hackernoon.com/)
 * [Checkboxes***](https://www.sitepoint.com/save-multiple-checkbox-values-database-rails/)
+* [SourceTree](https://www.sourcetreeapp.com/)
+* [Bitbucket]()
 
 * Tarea historia de versiones de android: Diferencias
 * Tarea 2 : Elementos del MANIFEST
