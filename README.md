@@ -14,3 +14,11 @@
 * [Entropia de Software](https://es.wikipedia.org/wiki/Entrop%C3%ADa_del_software)
 * Framework híbridos
 * Programación reactiva: https://blog.gft.com/es/2018/03/06/el-paradigma-de-la-programacion-reactiva-claves-para-entenderla/
+
+Formulario para renta de películas
+
+Basic Activity
+Control Layout*
+Constraint Layout
+
+Mostrar con TextView la información recolectada
