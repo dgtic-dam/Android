@@ -62,6 +62,12 @@ class ContactAdapter(
         notifyItemInserted(position) //Inserta en una posición
     }
 
+    public fun removeContact(position: Int){ //Agregar nuevos elementos a la lista
+        contacts.removeAt(position)
+        notifyDataSetChanged() // Notifica a la lista
+        notifyItemRemoved(position)
+    }
+
     fun setOnItemContactSelectedListener(onItemContactSelectedListener: OnItemContactSelectedListener){
         this.onItemContactSelectedListener=onItemContactSelectedListener
     }

@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity(), OnItemContactSelectedListener {
     //private lateinit var contactsRecyclerView:RecyclerView
     var idContact:Int=0
 
+    lateinit var contactAdapter: ContactAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,15 +46,26 @@ class MainActivity : AppCompatActivity(), OnItemContactSelectedListener {
             Contact(9,"Luisa", "Obrador", "55443356"),
             Contact(10,"Fabian", "Ebrad", "55443356"))
 
-        val contactAdapter: ContactAdapter= ContactAdapter(contacts, baseContext)
+        contactAdapter= ContactAdapter(contacts, baseContext)
+
+
         contactAdapter.setOnItemContactSelectedListener(this)
         contactsRecyclerView.adapter=contactAdapter
 
-        fab.setOnClickListener { view ->
+       /* fab.setOnClickListener { view ->
           /*  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()*/
             contactAdapter.addContact(Contact(11,"Ricardo","Moreno","54442234"),2)
-        }
+        }*/
+
+
+      /* R.id.action_add.setOnClickListener { view ->
+            contactAdapter.addContact(Contact(11,"Ricardo","Moreno","54442234"),2)
+        }*/
+
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -66,8 +79,25 @@ class MainActivity : AppCompatActivity(), OnItemContactSelectedListener {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_add -> {
+                add()
+                return true
+            }
+            R.id.action_settings -> {
+                remove()
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
+
         }
     }
+
+    fun add(){
+        contactAdapter.addContact(Contact(11,"Ricardo","Moreno","54442234"),2)
+    }
+
+    fun remove(){
+        contactAdapter.removeContact(1)
+    }
+
 }
