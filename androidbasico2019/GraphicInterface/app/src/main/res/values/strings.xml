@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">GraphicInterface</string>
+    <string name="action_settings">Settings</string>º
+    <string name="name_hint">Nombre:</string>
+    <string name="lastname_hint">Apellidos:</string>
+    <string name="age_hint">Edad:</string>
+    <string name="address_hint">Dirección:</string>
+    <string name="email_hint">Correo electrónico:</string>
+    <string name="numberphone_hint">Número telefónico:</string>
+    <string name="sex_label">Sexo:</string>
+    <string name="female_label">F</string>
+    <string name="male_label">M</string>
+    <string name="state_label">Estado:</string>
+    <string name="interest_label">Intereses:</string>
+    <string name="history_label">Historia</string>
+    <string name="geography_label">Geografia</string>
+    <string name="philosophy_label">Filosofia</string>
+    <string name="mathematics_label">Matemáticas</string>
+    <string name="spanish_label">Español</string>
+    <string name="languages_label">Lenguas</string>
+    <string-array name="states">
+        <item>Aguascalientes</item>
+        <item>Baja California Norte</item>
+        <item>Baja California Sur</item>
+        <item>CDMX</item>
+    </string-array>
+</resources>
