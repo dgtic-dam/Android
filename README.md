@@ -3,6 +3,7 @@
 * [Materiales](https://drive.google.com/drive/folders/1h8YT4ZpX4ijCbsbQ_L02GjzIW8om4J7s)
 * [Android Kotlin](https://developer.android.com/kotlin)
 * [WebP](https://developers.google.com/speed/webp/)
+* [Android Arsenal](https://android-arsenal.com/)
 * [Modernizer***](https://modernizr.com/)
 * [Backbone***](https://backbonejs.org/#Getting-started)
 * [Hackernoon***](https://hackernoon.com/)
@@ -22,3 +23,8 @@ Control Layout*
 Constraint Layout
 
 Mostrar con TextView la información recolectada
+
+
+Contexto: nos permite saber sobre que hilo se está ejecutando y agregarlo a ese hilo.
+
+ViewHolder: Se genra una instancia estática, para estarlo reciclando.
