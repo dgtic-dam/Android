@@ -1,5 +1,7 @@
 package com.cybertch.fragmentsexample.model
 
+import java.io.Serializable
+
 
 /**
  * Description:
@@ -13,4 +15,4 @@ package com.cybertch.fragmentsexample.model
  * @since:
  *
  **/
-data class Contact (var id:Int, var name:String, var lastname:String, var numberPhone:String)
+data class Contact (var id:Int, var name:String, var lastname:String, var numberPhone:String):Serializable

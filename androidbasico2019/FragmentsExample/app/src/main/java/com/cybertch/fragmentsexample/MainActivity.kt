@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import com.cybertch.fragmentsexample.fragment.DetailFragment
+import com.cybertch.fragmentsexample.fragment.MainFragment
+import com.cybertch.fragmentsexample.model.Contact
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,7 +18,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        Log.d("[STATE]","CREATED")
+
+        if(savedInstanceState==null){//Bundle
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.containerMain, MainFragment.newInstance())
+                .commit()
+            if (resources.getBoolean(R.bool.is_tablet)){
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.containerDetail, DetailFragment.newInstance(Contact(0,"","",""))).commit()
+            }
+        }
+
+      /*  Log.d("[STATE]","CREATED")*/
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -23,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
+    /*override fun onStart() {
         super.onStart()
         Log.d("[STATE]","STARTED")
     }
@@ -51,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         Log.d("[STATE]","DESTROYED")
         super.onDestroy()
-    }
+    }*/
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
