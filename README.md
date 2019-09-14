@@ -14,6 +14,7 @@
 * [Deuda Técnica](https://en.wikipedia.org/wiki/Technical_debt)
 * [Entropia de Software](https://es.wikipedia.org/wiki/Entrop%C3%ADa_del_software)
 * [bypeople](https://www.bypeople.com/)
+* [freebies.bypeople](https://freebies.bypeople.com/)
 * Framework híbridos
 * Programación reactiva: https://blog.gft.com/es/2018/03/06/el-paradigma-de-la-programacion-reactiva-claves-para-entenderla/
 
