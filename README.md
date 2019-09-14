@@ -32,3 +32,5 @@ Mostrar con TextView la información recolectada
 Contexto: nos permite saber sobre que hilo se está ejecutando y agregarlo a ese hilo.
 
 ViewHolder: Se genra una instancia estática, para estarlo reciclando.
+
+
