@@ -1,5 +1,6 @@
 package com.cybertch.basedatosexample
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        val preferences=getSharedPreferences("users", Context.MODE_PRIVATE)
+        Toast.makeText(baseContext, preferences.getString("name", "HOLA"),
+            Toast.LENGTH_LONG).show()
 
         fab.setOnClickListener { view ->
             saveUser()
@@ -56,6 +61,17 @@ class MainActivity : AppCompatActivity() {
         val sex = sexSelected()
         var numberPhone = number_phone_textInputLayout.editText?.text.toString()
         var email = email_textInputLayout.editText?.text.toString()
+
+        val preferences=getSharedPreferences("users", Context.MODE_PRIVATE)//solo la app puede acceder a las preferencias, busca o crea users.xml
+
+        val editor=preferences.edit()
+        editor.putInt("id", 1)
+        editor.putString("name", name)
+        editor.putString("lastname", lastname)
+        editor.commit()
+      /*  editor.putInt("age", age)
+        editor.putString("numberPhone", numberPhone)
+        editor.putString("email",email)*/
 
         database=Database(baseContext)
         if(database.registerUser(User(name,lastname,age,numberPhone,email))){
