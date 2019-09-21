@@ -18,6 +18,7 @@
 * [Node.js](https://nodejs.org/es/)
 * Framework híbridos
 * Programación reactiva: https://blog.gft.com/es/2018/03/06/el-paradigma-de-la-programacion-reactiva-claves-para-entenderla/
+* Google console, para publicar (https://developer.android.com/distribute/console?hl=es)
 
 
 Formulario para renta de películas
