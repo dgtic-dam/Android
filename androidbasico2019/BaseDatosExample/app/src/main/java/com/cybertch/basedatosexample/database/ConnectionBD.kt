@@ -47,7 +47,7 @@ class ConnectionBD (context: Context): SQLiteOpenHelper(
         const val BD_NAME="users"
         const val VERSION_BD=1
         const val TABLE_NAME="users"
-        const val CREATE_TABLE_USER="CREATE TABLE users(id INTEGER PRIMARY KEY, name VARCHAR(30), " +
+        const val CREATE_TABLE_USER="CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(30), " +
                 "lastname VARCHAR(60), age INT, numberphone VARCHAR(10), email VARCHAR(100))"
         const val DROP_TABLE_USER="DROP TABLE IF EXISTS users"
         const val MODE_WRITE=1

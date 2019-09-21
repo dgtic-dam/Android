@@ -29,21 +29,23 @@ class Database {
     }
 
     fun registerUser(user: User): Boolean {
-        val values = ContentValues()
-        values.put(ID, user.id)
+        val values = ContentValues() //ContentValues similar a Bundle, es un mapa de objetos para insertar datos
+       // values.put(ID, user.id) //Llave, valor
         values.put(NAME, user.name)
         values.put(LASTNAME, user.lastname)
         values.put(AGE, user.age)
         values.put(NUMBERPHONE, user.numberPhone)
         values.put(EMAIL, user.email)
         val insert = sqliteDatabase.insert(ConnectionBD.TABLE_NAME, null, values)
-        return insert > 0
+        return insert > 0 //error regresa -1
     }
 
     fun deleteUser(idUser: Int): Boolean {
-        val values = arrayOf(idUser.toString())
+        val values = arrayOf(idUser.toString()) //id se convierte a cadena, se genera un arreglo
         val selection = "id like ?"
         val delete = sqliteDatabase.delete(ConnectionBD.TABLE_NAME, selection, values)
+        /*var sql="delete from users where id="+idUser
+        sqliteDatabase.execSQL(sql)*/
         return delete > 0
     }
 
@@ -97,6 +99,7 @@ class Database {
             do {
                 user = User(
                     cursor.getInt(0),
+                    //cursor.getInt(cursor.getColumnIndex())
                     cursor.getString(1),
                     cursor.getString(2),
                     cursor.getInt(3),
@@ -108,7 +111,12 @@ class Database {
         return user
     }
 
-    companion object {
+    fun closeDB(){
+        if(sqliteDatabase!=null)
+            sqliteDatabase.close()
+    }
+
+    companion object { //id de la tabla
         const val ID = "id"
         const val NAME = "name"
         const val LASTNAME = "lastname"

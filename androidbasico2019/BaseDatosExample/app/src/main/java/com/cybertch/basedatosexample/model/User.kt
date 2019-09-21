@@ -18,4 +18,11 @@ data class User(var id:Int,
                 var lastname:String,
                 var age:Int,
                 var numberPhone:String,
-                var email:String)
+                var email:String){
+
+    constructor(name:String,
+                lastname:String,
+                age:Int,
+                numberPhone:String,
+                email:String):this(0,name,lastname, age, numberPhone, email)
+}
